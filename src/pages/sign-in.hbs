@@ -1,0 +1,39 @@
+---
+fields: 
+    - 
+        label: 'Login'
+        type: 'text'
+        placeholder: 'Enter your login'
+    - 
+        label: 'Password'
+        type: 'password'
+        placeholder: 'Enter your password'
+
+buttons:
+    -
+        type: 'button'
+        modifier: 'link'
+        text: 'Sing Up'
+    -
+        type: 'submit'
+        modifier: 'primary'
+        text: 'Sign In'
+---
+
+{{!< sign-in-wrapper }}
+
+<div>
+    <div class="logo" ></div>
+    <h1 class="title">Sign In</h1>
+
+    <form class="form">
+        {{#each fields }}
+            {{> 'input/input' this }}
+        {{/each}}
+        <div class="form-actions">
+            {{#each buttons }}
+                {{> 'button/button' this }}
+            {{/each}}
+        </div>
+    </form>
+</div>

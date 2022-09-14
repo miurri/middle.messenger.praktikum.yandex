@@ -4,6 +4,8 @@
   "description": "MeowTalk - Awesome Messenger",
   "main": "index.js",
   "scripts": {
+    "start": "parcel src/pages/index.hbs --no-cache",
+    "build": "parcel build src/pages/index.hbs",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
@@ -16,5 +18,13 @@
   "bugs": {
     "url": "https://github.com/miurri/middle.messenger.praktikum.yandex/issues"
   },
-  "homepage": "https://github.com/miurri/middle.messenger.praktikum.yandex#readme"
+  "homepage": "https://github.com/miurri/middle.messenger.praktikum.yandex#readme",
+  "devDependencies": {
+    "@anikin/parcel-transformer-handlebars": "1.0.9",
+    "@parcel/packager-raw-url": "^2.7.0",
+    "@parcel/transformer-webmanifest": "^2.7.0",
+    "parcel": "2.7.0",
+    "postcss": "^8.4.16",
+    "postcss-import": "14.1.0"
+  }
 }
