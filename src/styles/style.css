@@ -1,51 +1,11 @@
 @import '../partials/input/style.css';
 @import '../partials/button/style.css';
-
-:root {
-    --font-family-set: 'Open Sans', sans-serif;
-
-    /* basic colors */
-    --white: #FFFFFF;
-    --gray: #D6D6D6;
-    --black: #000000;
-    --shadow-color: rgba(0, 0, 0, 0.043);
-
-    /* palette */
-    --light-green: #D5E5E2;
-    --bright-green: #54B8B5;
-    --light-pink: rgba(249, 196, 188, 0.4);
-    --pink: #F9C4BC;
-    --bright-pink: #FE9D97;
-    --dirty-pink: #E3AAA5;
-
-    /* font sizes */
-    --regular-font-size: 14px;
-    --label-font-size: 16px;
-    --title-font-size: 20px;
-
-    /* font weights */
-    --regular-font-weight: 400;
-    --medium-font-weight: 500;
-    --semi-bold-font-weight: 600;
-    --bold-font-weight: 700;
-
-    /* border widths */
-    --field-border-width: 1px;
-
-    /* border radiuses */
-    --field-border-radius: 2px;
-    --section-border-radius: 10px;
-
-    /* spaces */
-    --spaces-4: 4px;
-    --spaces-6: 6px;
-    --spaces-8: 8px;
-    --spaces-12: 12px;
-    --spaces-16: 16px;
-    --spaces-24: 24px;
-    --spaces-32: 32px;
-    --spaces-64: 64px;
-}
+@import '../partials/sidebar/style.css';
+@import '../partials/form/style.css';
+@import '../partials/main-header/style.css';
+@import '../partials/page-error/style.css';
+@import './settings.css';
+@import './constants.css';
 
 * {
     box-sizing: border-box;
@@ -74,7 +34,12 @@
     background-color: var(--white);
 }
 
-.sign-in-container {
+.main {
+    display: flex;
+    height: 100%;
+}
+
+.small-container {
     display: flex;
     flex-direction: column;
 
@@ -99,16 +64,4 @@
 
     font-size: var(--title-font-size);
     color: var(--bright-green);
-}
-
-.form {
-
-}
-
-.form-actions {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-
-    margin-top: var(--spaces-24);
 }
