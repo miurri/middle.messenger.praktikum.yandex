@@ -6,7 +6,9 @@
     "dev": "parcel src/pages/index.hbs --no-cache",
     "build": "parcel build src/pages/index.hbs",
     "start": "npm run build && node ./server.js",
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "lint": "eslint '**/*.ts'",
+    "lint:css": "stylelint '**/*.css'"
   },
   "repository": {
     "type": "git",
@@ -23,9 +25,16 @@
     "@anikin/parcel-transformer-handlebars": "1.0.9",
     "@parcel/packager-raw-url": "^2.7.0",
     "@parcel/transformer-webmanifest": "^2.7.0",
+    "@types/node": "^18.7.23",
+    "@typescript-eslint/eslint-plugin": "^5.38.1",
+    "@typescript-eslint/parser": "^5.38.1",
+    "eslint": "^8.24.0",
     "parcel": "2.7.0",
     "postcss": "^8.4.16",
-    "postcss-import": "14.1.0"
+    "postcss-import": "14.1.0",
+    "stylelint": "^14.13.0",
+    "stylelint-config-standard": "^28.0.0",
+    "typescript": "^4.8.4"
   },
   "dependencies": {
     "express": "^4.18.1"

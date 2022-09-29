@@ -1,21 +1,21 @@
 .main-section {
-    width: 100%;
+  width: 100%;
 }
 
 .main-content {
-    display: flex;
-    justify-content: space-between;
-
-    padding: var(--spaces-32);
+  display: flex;
+  justify-content: space-between;
+  padding: var(--spaces-32);
 }
 
-.content-left, .content-right  {
-    width: 264px;
+.content-left,
+.content-right {
+  width: 264px;
 }
 
 .content-right {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: var(--spaces-16);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: var(--spaces-16);
 }
