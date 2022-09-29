@@ -1,0 +1,74 @@
+---
+menuItems:
+    -
+        label: 'User info'
+        modifier: 'active'
+        icon: '../../static/icons/user.svg'
+    -
+        label: 'Password settings'
+        modifier: ''
+        icon: '../../static/icons/lock.svg'
+
+formData:
+    fields: 
+        - 
+            label: 'First name'
+            type: 'text'
+            value: 'Anna'
+            placeholder: 'Enter your first name'
+        - 
+            label: 'Second name'
+            type: 'text'
+            value: 'Lysenko'
+            placeholder: 'Enter your second name'
+        - 
+            label: 'Display name'
+            type: 'text'
+            value: 'Anna Lysenko~'
+            placeholder: 'Enter your second name'
+        - 
+            label: 'Login'
+            type: 'text'
+            value: 'Miurri'
+            placeholder: 'Enter your login'
+        - 
+            label: 'Email'
+            type: 'text'
+            value: 'my-email@gmail.com'
+            placeholder: 'Enter your email'
+        - 
+            label: 'Phone'
+            type: 'tel'
+            value: '+7 (999) 99-99-999'
+            placeholder: 'Enter your phone'
+
+    buttons:
+        -
+            type: 'submit'
+            modifier: 'primary'
+            text: 'Save'
+
+changeAvaratButton:
+    type: 'button'
+    modifier: 'link'
+    text: 'Change photo'
+---
+
+{{!< settings-wrapper }}
+
+<div class="main">
+    {{> 'sidebar/sidebar' menuItems }}
+    <div class="main-section">
+        {{> 'main-header/main-header' 'Password settings' }}
+
+        <div class="main-content">
+            <div class="content-left">
+                {{> 'form/form' formData }}
+            </div>
+            <div class="content-right">
+                <img class="avatar-icon" src="../../static/icons/avatar.svg" alt="avatar" />
+                {{> 'button/button' changeAvaratButton }}
+            </div>
+        </div>
+    </div>
+</div>
