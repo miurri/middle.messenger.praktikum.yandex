@@ -1,0 +1,4 @@
+.setting-list-item {
+  gap: var(--spaces-24);
+  padding: 0 var(--spaces-24);
+}

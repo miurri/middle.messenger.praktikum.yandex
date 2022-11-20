@@ -5,6 +5,7 @@
   --white: #fff;
   --gray: #d6d6d6;
   --black: #000;
+  --error: #ff4d4f;
   --shadow-color: rgb(0 0 0 / 4.3%);
 
   /* palette */
@@ -16,6 +17,7 @@
   --dirty-pink: #e3aaa5;
 
   /* font sizes */
+  --caption-font-size: 12px;
   --regular-font-size: 14px;
   --label-font-size: 16px;
   --title-font-size: 20px;
@@ -32,6 +34,7 @@
   /* border radiuses */
   --field-border-radius: 2px;
   --section-border-radius: 10px;
+  --avatar-border-radius: 50%;
 
   /* spaces */
   --spaces-4: 4px;

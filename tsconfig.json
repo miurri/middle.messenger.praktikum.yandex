@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "es2017", 
-    "typeRoots": ["node_modules/@types", "src/typings/app.d.ts"],
+    "typeRoots": ["node_modules/@types", "typings/app.d.ts"],
     "module": "commonjs",
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
@@ -11,6 +11,14 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "sourceMap": true,
-    "strictNullChecks": true 
-  }
+    "strictNullChecks": true,
+    "baseUrl": ".",
+    "paths": {
+      "~/*": ["./*"]
+    },
+    "pretty": true,
+  },
+  "exclude": [
+    "node_modules"
+  ],
 }

@@ -1,0 +1,22 @@
+<section class="sidebar">
+    <div>
+        <div class="sidebar-header">
+            <img src="{{logo}}" alt="logo" />
+        </div>
+        <ul class="sidebar-list">
+            {{#each privateItems}}
+                {{#with this}}
+                    <li class="sidebar-list-item {{#if isActive}}active{{/if}} chats-list-item" data-id="{{id}}">
+                        <img src="{{icon}}" alt="{{userName}}" class="chats-logo" />
+                        <div class="chats-info">
+                            <p class="chats-person">{{userName}}</p>
+                            <p class="chats-message">{{message}}</p>
+                        </div>        
+                    </li>
+                {{/with}}
+            {{/each}}
+        </ul>
+    </div>
+
+    {{{ActionsMenu active="chats"}}}
+</section>

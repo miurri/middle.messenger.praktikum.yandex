@@ -1,0 +1,23 @@
+<main class="app-container">
+    <div class="main">
+        {{{ChatList 
+            items=chatItems 
+            onChatClick=onChatClick
+            activeId=activeChatId
+        }}}
+        <div class="main-section">
+            {{{MainHeader title=headerTitle}}}
+            
+            {{#if activeChatId}}
+                <div class="chat-content">
+                    {{{Messages messages=messages}}}
+                    {{{MessageInput}}}
+                </div>
+            {{else}}
+                <div class="chat-content-default">
+                    Select somebody for chatting
+                </div>
+            {{/if}}
+        </div>
+    </div>
+</main>

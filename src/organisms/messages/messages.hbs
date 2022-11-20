@@ -1,0 +1,9 @@
+<ul class="message-list">
+    {{#each messages}}
+        {{#with this}}
+            <li class="message-item {{type}}" data-id="{{id}}">
+                {{content}}    
+            </li>
+        {{/with}}
+    {{/each}}
+</ul>

@@ -1,0 +1,27 @@
+.message-list {
+  margin: 0;
+  list-style: none;
+  padding: var(--spaces-16);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  gap: var(--spaces-16);
+  width: 100%;
+}
+
+.message-item {
+  padding: var(--spaces-6) var(--spaces-12);
+  border-radius: var(--section-border-radius);
+  color: var(--white);
+  max-width: 420px;
+}
+
+.message-item.income {
+  background-color: var(--bright-pink);
+  align-self: flex-start;
+}
+
+.message-item.outcome {
+  background-color: var(--bright-green);
+  align-self: flex-end;
+}

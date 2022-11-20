@@ -1,0 +1,7 @@
+<button class="button button-{{ modifier }} {{#if disabled}}button-disabled{{/if}}" type="{{ type }}">
+    {{#if iconSrc}}
+        <img class="button-icon" src="{{iconSrc}}" alt="{{text}}" />
+    {{else}}
+        {{ text }}
+    {{/if}}
+</button>
