@@ -9,7 +9,8 @@ export type ChatMessage = {
 export type ChatsPageState = {
 	chatItems: ChatListItem[];
 	activeChatId?: string;
-	onChatClick: (event: Event) => void;
+	handleChatClick: (event: Event) => void;
 	messages?: ChatMessage[];
 	headerTitle: string;
+	handleSendMessage: (event: Event, data?: string) => void;
 };

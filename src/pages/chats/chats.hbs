@@ -2,7 +2,7 @@
     <div class="main">
         {{{ChatList 
             items=chatItems 
-            onChatClick=onChatClick
+            onChatClick=handleChatClick
             activeId=activeChatId
         }}}
         <div class="main-section">
@@ -11,7 +11,7 @@
             {{#if activeChatId}}
                 <div class="chat-content">
                     {{{Messages messages=messages}}}
-                    {{{MessageInput}}}
+                    {{{MessageInput onSend=handleSendMessage}}}
                 </div>
             {{else}}
                 <div class="chat-content-default">

@@ -1,10 +1,11 @@
 import { Block, registerComponent } from "~/src/core";
-import { UserSettings } from "./user";
 import { PasswordSettings } from "./password";
+import { SettingsState } from "./settings.types";
+import { UserSettings } from "./user";
 import { settingsList, getActiveInfo } from "./settings.constants";
 import template from "bundle-text:./settings.hbs";
 
-export class SettingsPage extends Block<{}> {
+export class SettingsPage extends Block<{}, SettingsState> {
 	constructor() {
 		registerComponent(UserSettings);
 		registerComponent(PasswordSettings);
@@ -15,7 +16,7 @@ export class SettingsPage extends Block<{}> {
 		this.state = {
 			...getActiveInfo(),
 			settingsList,
-			onSettingClick: (event: Event) => {
+			handleSettingClick: (event) => {
 				const li = (event.target as HTMLElement)?.closest(
 					".sidebar-list-item"
 				) as HTMLLIElement | undefined;

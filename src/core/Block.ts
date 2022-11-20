@@ -29,10 +29,8 @@ export class Block<
 
 	eventBus: () => EventBus<Events>;
 
-	// @ts-expect-error Тип {} не соответствует типу S
-	protected state: S = {};
-	// @ts-expect-error Тип {} не соответствует типу Refs
-	protected refs: Refs = {};
+	protected state: S = {} as S;
+	protected refs: Refs = {} as Refs;
 
 	public constructor(props?: P & EventHandlers) {
 		const eventBus = new EventBus<Events>();
@@ -61,9 +59,8 @@ export class Block<
 	}
 
 	// eslint-disable-next-line @typescript-eslint/no-unused-vars
-	protected getStateFromProps(props: any): void {
-		// @ts-expect-error Тип {} не соответствует типу S
-		this.state = {};
+	protected getStateFromProps(props?: P & EventHandlers): void {
+		this.state = {} as S;
 	}
 
 	init() {
@@ -75,9 +72,8 @@ export class Block<
 		this.componentDidMount(props);
 	}
 
-	componentDidMount(props: P) {
-		console.log(props);
-	}
+	// eslint-disable-next-line @typescript-eslint/no-unused-vars
+	componentDidMount(props: P) {}
 
 	_componentDidUpdate(oldProps: P, newProps: P) {
 		const response = this.componentDidUpdate(oldProps, newProps);

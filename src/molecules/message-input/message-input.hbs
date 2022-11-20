@@ -1,10 +1,10 @@
 <div class="message-input">
-    {{{Textarea placeholder="Message..." value=input onInput=onInput}}}
+    {{{Textarea placeholder="Message..." value=input onInput=handleInput}}}
     {{{Button 
         text="send icon" 
         iconSrc=sendIcon 
         modifier="icon" 
         disabled=disabledSend 
-        onClick=onSend
+        onClick=handleSend
     }}}
 </div>

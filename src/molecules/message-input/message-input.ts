@@ -1,15 +1,17 @@
-import { Block } from "~/src/core";
+import { Block, EventHandlers } from "~/src/core";
 import { ICONS } from "~/src/constants";
-import { MessageInputState } from "./message-input.types";
+import { MessageInputProps, MessageInputState } from "./message-input.types";
 import template from "bundle-text:./message-input.hbs";
 import "./message-input.css";
 
-export class MessageInput extends Block<{}, MessageInputState> {
-	constructor({ ...props }: {}) {
+export class MessageInput extends Block<MessageInputProps, MessageInputState> {
+	constructor({ ...props }: MessageInputProps & EventHandlers) {
 		super({ ...props });
 	}
 
-	protected getStateFromProps() {
+	protected getStateFromProps(props: MessageInputProps) {
+		const { onSend } = props;
+
 		const returnFocus = (selectionStart: number) => {
 			const newInput = document.querySelector(
 				`textarea`
@@ -24,7 +26,7 @@ export class MessageInput extends Block<{}, MessageInputState> {
 		this.state = {
 			sendIcon: ICONS.SEND,
 			disabledSend: true,
-			onInput: (event) => {
+			handleInput: (event) => {
 				const textarea = event.target as HTMLTextAreaElement;
 				const value = textarea.value;
 				if (value !== this.state.input) {
@@ -37,10 +39,10 @@ export class MessageInput extends Block<{}, MessageInputState> {
 					returnFocus(textarea.selectionStart);
 				}
 			},
-			onSend: () => {
+			handleSend: (event) => {
 				const { input, disabledSend } = this.state;
 				if (!disabledSend) {
-					console.log(input);
+					onSend(event, input);
 				}
 			},
 		};

@@ -1,7 +1,11 @@
+export type MessageInputProps = {
+	onSend: (event: Event, data?: string) => void;
+};
+
 export type MessageInputState = {
 	sendIcon: string;
 	input?: string;
-	onInput: (event: Event) => void;
+	handleInput: (event: Event) => void;
 	disabledSend: boolean;
-	onSend: (event: Event) => void;
+	handleSend: (event: Event) => void;
 };

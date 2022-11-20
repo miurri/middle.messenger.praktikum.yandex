@@ -13,17 +13,7 @@ import {
 	ChatsPage,
 	SettingsPage,
 } from "./pages";
-
 import "./styles/style.css";
-
-type PagesUnion =
-	| RootPage
-	| ChatsPage
-	| SignInPage
-	| SignUpPage
-	| Error500
-	| Error404
-	| SettingsPage;
 
 registerAtoms();
 registerMolecules();
@@ -32,15 +22,27 @@ registerOrganisms();
 document.addEventListener("DOMContentLoaded", () => {
 	const page = document.location.href.split("/")[3] || "";
 
-	const pages: Record<string, PagesUnion> = {
-		[""]: new RootPage(),
-		["chats"]: new ChatsPage(),
-		["sign-in"]: new SignInPage(),
-		["sign-up"]: new SignUpPage(),
-		["settings"]: new SettingsPage(),
-		["error-500"]: new Error500(),
-	};
+	switch (page) {
+		case "":
+			renderDOM(new RootPage());
+			break;
+		case "chats":
+			renderDOM(new ChatsPage());
+			break;
+		case "sign-in":
+			renderDOM(new SignInPage());
+			break;
+		case "sign-up":
+			renderDOM(new SignUpPage());
+			break;
+		case "settings":
+			renderDOM(new SettingsPage());
+			break;
+		case "error-500":
+			renderDOM(new Error500());
+			break;
 
-	// @ts-ignore
-	renderDOM(pages[page] || new Error404());
+		default:
+			renderDOM(new Error404());
+	}
 });

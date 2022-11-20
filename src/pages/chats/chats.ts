@@ -13,7 +13,10 @@ export class ChatsPage extends Block<{}, ChatsPageState> {
 		this.state = {
 			chatItems,
 			headerTitle: getHeaderTitle(),
-			onChatClick: (event: Event) => {
+			handleSendMessage: (event, data) => {
+				console.log({ data, event });
+			},
+			handleChatClick: (event) => {
 				const li = (event.target as HTMLElement)?.closest(
 					".sidebar-list-item"
 				) as HTMLLIElement | undefined;
