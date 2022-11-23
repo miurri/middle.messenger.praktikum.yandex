@@ -8,6 +8,10 @@
 * редактирование пароля,
 * отправка текстовых сообщений.
 
+# Ссылки на PR
+  * [1 спринт](https://github.com/miurri/middle.messenger.praktikum.yandex/pull/1)
+  * [2 спринт](https://github.com/miurri/middle.messenger.praktikum.yandex/pull/2)
+
 ## Дополнительные материалы по проекту
 
 * Дизайн приложения в [Figma](https://www.figma.com/file/A4QBWLps0o5B0vM0t0LdC9/Messenger?node-id=0%3A1)
