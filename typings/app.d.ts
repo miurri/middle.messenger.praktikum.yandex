@@ -1,8 +1,3 @@
-declare module "*.svg" {
-	const content: any;
-	export default content;
-}
-
 declare global {
 	export type Nullable<T> = T | null;
 

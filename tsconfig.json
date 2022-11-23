@@ -13,12 +13,9 @@
     "sourceMap": true,
     "strictNullChecks": true,
     "baseUrl": ".",
+    "pretty": true,
     "paths": {
       "~/*": ["./*"]
-    },
-    "pretty": true,
-  },
-  "exclude": [
-    "node_modules"
-  ],
+    }
+  }
 }

@@ -10,9 +10,9 @@ export { ImageInputProps } from "./image-input";
 export { InputProps } from "./input";
 
 export const registerAtoms = () => {
-	registerComponent(Button);
-	registerComponent(ImageInput);
-	registerComponent(Input);
-	registerComponent(MainHeader);
-	registerComponent(Textarea);
+	registerComponent("Button", Button);
+	registerComponent("ImageInput", ImageInput);
+	registerComponent("Input", Input);
+	registerComponent("MainHeader", MainHeader);
+	registerComponent("Textarea", Textarea);
 };

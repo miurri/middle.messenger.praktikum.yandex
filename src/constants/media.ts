@@ -1,17 +1,17 @@
-const logo: string = require("~/static/logo.svg");
-const backIcon: string = require("~/static/icons/left-arrow.svg");
-const chatsActiveIcon: string = require("~/static/icons/chats-active.svg");
-const chatsIcon: string = require("~/static/icons/chats.svg");
-const logoutIcon: string = require("~/static/icons/logout.svg");
-const settingsActiveIcon: string = require("~/static/icons/settings-active.svg");
-const settingsIcon: string = require("~/static/icons/settings.svg");
-const sendActiveIcon: string = require("~/static/icons/send-active.svg");
-const sendIcon: string = require("~/static/icons/send.svg");
-const userIcon: string = require("~/static/icons/user.svg");
-const lockIcon: string = require("~/static/icons/lock.svg");
-const avatarIcon: string = require("~/static/icons/avatar.svg");
-const pageNotFound: string = require("~/static/error-404.svg");
-const internalServerError: string = require("~/static/error-500.svg");
+import logo from "~/static/logo.svg";
+import backIcon from "~/static/icons/left-arrow.svg";
+import chatsActiveIcon from "~/static/icons/chats-active.svg";
+import chatsIcon from "~/static/icons/chats.svg";
+import logoutIcon from "~/static/icons/logout.svg";
+import settingsActiveIcon from "~/static/icons/settings-active.svg";
+import settingsIcon from "~/static/icons/settings.svg";
+import sendActiveIcon from "~/static/icons/send-active.svg";
+import sendIcon from "~/static/icons/send.svg";
+import userIcon from "~/static/icons/user.svg";
+import lockIcon from "~/static/icons/lock.svg";
+import avatarIcon from "~/static/icons/avatar.svg";
+import pageNotFound from "~/static/error-404.svg";
+import internalServerError from "~/static/error-500.svg";
 
 export const ICONS = {
 	AVATAR: avatarIcon,

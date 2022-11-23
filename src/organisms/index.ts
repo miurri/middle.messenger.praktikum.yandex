@@ -10,8 +10,8 @@ export { MessageItem } from "./messages";
 export { SettingListItem } from "./setting-list";
 
 export const registerOrganisms = () => {
-	registerComponent(ChatList);
-	registerComponent(Form);
-	registerComponent(Messages);
-	registerComponent(SettingList);
+	registerComponent("ChatList", ChatList);
+	registerComponent("Form", Form);
+	registerComponent("Messages", Messages);
+	registerComponent("SettingList", SettingList);
 };

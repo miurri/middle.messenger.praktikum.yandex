@@ -11,9 +11,9 @@ interface BlockConstructable<
 export function registerComponent<
 	Props extends Record<string, unknown>,
 	State extends Record<string, unknown> = {}
->(Component: BlockConstructable<Props, State>) {
+>(componentName: string, Component: BlockConstructable<Props, State>) {
 	Handlebars.registerHelper(
-		Component.name,
+		componentName,
 		function (
 			this: Props,
 			{ hash: { ref, ...hash }, data, fn }: HelperOptions
