@@ -1,0 +1,36 @@
+.chats-list-item {
+  gap: var(--spaces-12);
+  padding: 0 var(--spaces-16);
+}
+
+.chats-logo {
+  border-radius: var(--avatar-border-radius);
+  max-width: 40px;
+  max-height: 40px;
+}
+
+.chats-info {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: var(--spaces-4);
+  max-width: calc(100% - 40px - var(--spaces-12));
+}
+
+.chats-person {
+  font-weight: var(--semi-bold-font-weight);
+  font-size: var(--regular-font-size);
+  color: var(--bright-green);
+  margin: 0;
+}
+
+.chats-message {
+  font-weight: var(--regular-font-weight);
+  font-size: var(--caption-font-size);
+  color: var(--black);
+  width: 100%;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0;
+}

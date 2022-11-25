@@ -1,0 +1,13 @@
+.message-input {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--spaces-12) var(--spaces-16);
+  border-top: var(--field-border-width) solid var(--dirty-pink);
+  min-height: 52px;
+  gap: var(--spaces-12);
+}
+
+.message-icon-disabled {
+  cursor: default;
+}

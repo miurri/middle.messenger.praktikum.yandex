@@ -1,0 +1,19 @@
+<main class="app-container">
+    <div class="main">
+        {{{SettingList 
+            activeId=activeId 
+            items=settingsList 
+            onSettingClick=handleSettingClick
+        }}}
+        <div class="main-section">
+            {{{MainHeader title=headerTitle backLink="/" }}}
+            {{#if isPassword}}
+                {{{PasswordSettings }}}
+            {{else}}
+                {{{UserSettings }}}
+            {{/if}}
+            
+            </div>
+        </div>
+    </div>
+</main>

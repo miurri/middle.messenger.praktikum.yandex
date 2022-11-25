@@ -1,0 +1,34 @@
+.main-header {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 52px;
+  width: 100%;
+  padding: 0 var(--spaces-24);
+  border-bottom: var(--field-border-width) solid var(--dirty-pink);
+  border-radius: 0 var(--section-border-radius) 0 0;
+  background-color: var(--bright-pink);
+  color: var(--white);
+}
+
+.main-header-back {
+  position: absolute;
+  left: var(--spaces-32);
+  display: flex;
+  align-items: center;
+  font-size: var(--label-font-size);
+  cursor: pointer;
+  color: inherit;
+  text-decoration: none;
+}
+
+.main-header-icon {
+  margin: var(--spaces-6) var(--spaces-8) 0 0;
+}
+
+.main-header-title {
+  margin: 0;
+  font-size: var(--title-font-size);
+  font-weight: var(--bold-font-weight);
+}

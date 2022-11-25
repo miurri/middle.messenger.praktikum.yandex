@@ -1,0 +1,13 @@
+.chat-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: calc(100% - 52px);
+}
+
+.chat-content-default {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 52px);
+}

@@ -1,0 +1,11 @@
+<ul class="actions-menu">
+    {{#each items}}
+        {{#with this}}
+            <li class="actions-menu-item {{#if isActive}}active{{/if}}">
+                <a href="{{link}}">
+                    <img src="{{icon}}" alt={{alt}}/>
+                </a>
+            </li>
+        {{/with}}
+    {{/each}}
+</ul>

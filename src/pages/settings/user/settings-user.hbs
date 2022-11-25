@@ -1,0 +1,20 @@
+<div class="main-content">
+    <div class="content-left">
+        {{{Form 
+            fields=formData.fields 
+            buttons=formData.buttons 
+            validate=validate 
+            formSubmit=formSubmit
+        }}}
+    </div>
+    <div class="content-right">
+        <img class="avatar-icon" src="{{avatarIcon}}" alt="avatar" />
+        {{#with changeAvatar}}
+            {{{ImageInput 
+                name="{{name}}"
+                label="{{label}}"
+                onChange=onChange
+            }}}
+        {{/with}}
+    </div>
+</div>
